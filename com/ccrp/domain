@@ -1,0 +1,8 @@
+package com.ccrp.domain
+
+public Class User{
+    
+    private int id;
+    private String name;
+    
+}
