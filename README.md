@@ -1,2 +1,2 @@
 # ccrp
-Cmapus's Contributing and Reading Platform
+Campus's Contributing and Reading Platform
