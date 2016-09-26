@@ -1,0 +1,5 @@
+package com.ccrp.dao.UserDao
+
+public interface UserDao{
+
+}
