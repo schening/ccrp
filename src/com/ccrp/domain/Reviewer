@@ -1,0 +1,58 @@
+package com.ccrp.domain;
+
+import java.io.Serializable;
+import java.util.Set;
+
+
+/**
+ * 审稿人类，继承了BasRole类，具有BaseRole的所有属性，实现了Serializable
+ * @author YaoJialing
+ *
+ */
+public class Reviewer extends BaseRole implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+    
+	private long rid;//审稿人ID
+	private String info;//备注信息
+	
+	private Set<Manuscript> manuscripts;
+	
+	/**
+	 *属性对应的setter()和getter()方法 
+	 */
+	public long getRid() {
+		return rid;
+	}
+	public void setRid(long rid) {
+		this.rid = rid;
+	}
+	public String getInfo() {
+		return info;
+	}
+	public void setInfo(String info) {
+		this.info = info;
+	}
+	
+	
+	public Set<Manuscript> getManuscripts() {
+		return manuscripts;
+	}
+	public void setManuscripts(Set<Manuscript> manuscripts) {
+		this.manuscripts = manuscripts;
+	}
+	
+	/**
+	 * 覆盖的toString()方法
+	 */
+	@Override
+	public String toString() {
+		return "Reviewer [rid=" + rid + ", info=" + info + ", manuscripts=" + manuscripts + "]";
+	}
+	
+	
+	
+}
