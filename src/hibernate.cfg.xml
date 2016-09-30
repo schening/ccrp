@@ -1,1 +1,42 @@
 
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	    <!-- Database connection settings -->
+        <property name="connection.url">jdbc:mysql://localhost:3306/ccrp</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">admin</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">10</property>
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Disable the second-level cache -->
+        <property name="cache.provider_class">
+            org.hibernate.cache.NoCacheProvider
+        </property>
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">create</property>
+        
+        <property name="javax.persistence.validation.mode">none</property>
+        
+        <mapping resource="com/ccrp/domain/User.hbm.xml"/>
+        <mapping resource="com/ccrp/domain/Editor.hbm.xml"/>
+        <mapping resource="com/ccrp/domain/Reviewer.hbm.xml"/>
+        <mapping resource="com/ccrp/domain/Article.hbm.xml"/>
+        <mapping resource="com/ccrp/domain/Manuscript.hbm.xml"/>
+        <mapping resource="com/ccrp/domain/College.hbm.xml"/>
+        <mapping resource="com/ccrp/domain/Comment.hbm.xml"/>
+        <mapping resource="com/ccrp/domain/Notice.hbm.xml"/>
+        <mapping resource="com/ccrp/domain/Record.hbm.xml"/>
+        <mapping resource="com/ccrp/domain/Type.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>
