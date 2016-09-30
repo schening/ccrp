@@ -1,0 +1,54 @@
+package com.ccrp.domain;
+
+import java.io.Serializable;
+/**
+ * 学院和专业
+ * @author YaoJialing
+ *
+ */
+public class College implements Serializable {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private long cid;//专业ID
+	private String name;//专业名
+	private long parent;//父级节点
+	
+	/**
+	 * 属性对应的setter()和getter()方法
+	 * @return
+	 */
+	public long getCid() {
+		return cid;
+	}
+	public void setCid(long cid) {
+		this.cid = cid;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public long getParent() {
+		return parent;
+	}
+	public void setParent(long parent) {
+		this.parent = parent;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	/**
+	 * 覆写的toString()方法
+	 */
+	@Override
+	public String toString() {
+		return "College [cid=" + cid + ", name=" + name + ", parent=" + parent + "]";
+	}
+	
+	
+}
