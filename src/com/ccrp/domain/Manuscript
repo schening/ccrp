@@ -1,0 +1,162 @@
+package com.ccrp.domain;
+
+import java.io.Serializable;
+/**
+ * 稿件
+ * @author YaoJialing
+ *
+ */
+import java.util.Date;
+public class Manuscript implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+    
+	private long mid;//稿件ID
+	private String title;//标题
+	private String tags;//标签
+	private String author;//作者
+	private String type;//类型
+	private String content;//内容
+	private Date releaseDate;//投稿日期
+	private String editorName;//编辑名
+	private Date firDate;//第一次审核时间
+	private String firState;//第一次审核状态
+	private String reviewerName;//审稿人名
+	private Date secDate;//第二次审核状态
+	private String secState;//第二次审核状态
+	private String opinion;//意见
+	private String release;//是否发布
+	
+	private User creator;//稿件创建人
+	private Editor editor;//稿件第一次审核人
+	private Reviewer reviewer;//稿件第二次审核人
+	
+	/**
+	 * 属性对应的setter()和getter()方法
+	 */
+	public long getMid() {
+		return mid;
+	}
+	public void setMid(long mid) {
+		this.mid = mid;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getTags() {
+		return tags;
+	}
+	public void setTags(String tags) {
+		this.tags = tags;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public Date getReleaseDate() {
+		return releaseDate;
+	}
+	public void setReleaseDate(Date releaseDate) {
+		this.releaseDate = releaseDate;
+	}
+	public String getEditorName() {
+		return editorName;
+	}
+	public void setEditorName(String editorName) {
+		this.editorName = editorName;
+	}
+	public Date getFirDate() {
+		return firDate;
+	}
+	public void setFirDate(Date firDate) {
+		this.firDate = firDate;
+	}
+	public String getFirState() {
+		return firState;
+	}
+	public void setFirState(String firState) {
+		this.firState = firState;
+	}
+	public String getReviewerName() {
+		return reviewerName;
+	}
+	public void setReviewerName(String reviewerName) {
+		this.reviewerName = reviewerName;
+	}
+	public Date getSecDate() {
+		return secDate;
+	}
+	public void setSecDate(Date secDate) {
+		this.secDate = secDate;
+	}
+	public String getSecState() {
+		return secState;
+	}
+	public void setSecState(String secState) {
+		this.secState = secState;
+	}
+	public String getOpinion() {
+		return opinion;
+	}
+	public void setOpinion(String opinion) {
+		this.opinion = opinion;
+	}
+	public String getRelease() {
+		return release;
+	}
+	public void setRelease(String release) {
+		this.release = release;
+	}
+	public User getCreator() {
+		return creator;
+	}
+	public void setCreator(User creator) {
+		this.creator = creator;
+	}
+	public Editor getEditor() {
+		return editor;
+	}
+	public void setEditor(Editor editor) {
+		this.editor = editor;
+	}
+	public Reviewer getReviewer() {
+		return reviewer;
+	}
+	public void setReviewer(Reviewer reviewer) {
+		this.reviewer = reviewer;
+	}
+	
+	/**
+	 * 覆写的toString()方法
+	 */
+	@Override
+	public String toString() {
+		return "Manuscript [mid=" + mid + ", title=" + title + ", tags=" + tags + ", author=" + author + ", type="
+				+ type + ", content=" + content + ", releaseDate=" + releaseDate + ", editorName=" + editorName
+				+ ", firDate=" + firDate + ", firState=" + firState + ", reviewerName=" + reviewerName + ", secDate="
+				+ secDate + ", secState=" + secState + ", opinion=" + opinion + ", release=" + release + ", creator="
+				+ creator + ", editor=" + editor + ", reviewer=" + reviewer + "]";
+	}
+	
+	
+}
