@@ -1,4 +1,4 @@
-BaseRole(account,name,sex,nick,phone,address,email,college,registDate)
+BaseRole(account,name,sex,nick,phone,address,email,college)
 User(uid,account,name,sex,nick,phone,address,email,college,major,birthday,registTime,hide,grade,photo|articles,comments,collections,manuscripts)
 Editor(eid,aacount,name,sex,nick,phone,address,email,college,role|manuscripts,articles)
 Reviewer(rid,account,name,sex,nick,phone,address,email,college,info|manuscripts)
