@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.ccrp.domain.Type" table="type">
+        <id column="tid" type="java.lang.Long" name="tid">
+            <generator class="increment"></generator>
+        </id>
+        <property name="name" column="name" type="java.lang.String" not-null="true" length="20" />
+        <property name="description" column="description" type="java.lang.String" not-null="true" length="200" />
+        <property name="creator" column="creator" type="java.lang.String" not-null="true" length="10" />
+        <property name="createDate" column="createDate" not-null="true"  />    
+    </class>
+</hibernate-mapping>
