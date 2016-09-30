@@ -1,0 +1,75 @@
+package com.ccrp.domain;
+
+import java.io.Serializable;
+/**
+ * 文章类型
+ * @author YaoJialing
+ *
+ */
+public class Type implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+    
+	private long tid;//类型ID
+	private String name;//类型名称
+	private String description;//类型描述
+	private String creator;//创建人
+	private String account;//创建人账户
+	private String createDate;//创建时间
+	
+	/**
+	 * 属性对应的setter()和getter9()方法
+	 */
+	
+	public long getTid() {
+		return tid;
+	}
+	public void setTid(long tid) {
+		this.tid = tid;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getCreator() {
+		return creator;
+	}
+	public void setCreator(String creator) {
+		this.creator = creator;
+	}
+	public String getAccount() {
+		return account;
+	}
+	public void setAccount(String account) {
+		this.account = account;
+	}
+	public String getCreateDate() {
+		return createDate;
+	}
+	public void setCreateDate(String createDate) {
+		this.createDate = createDate;
+	}
+	
+	/**
+	 * 覆写的toString()方法
+	 */
+	@Override
+	public String toString() {
+		return "Type [tid=" + tid + ", name=" + name + ", description=" + description + ", creator=" + creator
+				+ ", account=" + account + ", createDate=" + createDate + "]";
+	}
+	
+	
+	
+}
