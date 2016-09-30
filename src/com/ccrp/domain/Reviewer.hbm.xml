@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.ccrp.domain.User" table="user">
+        <id column="uid" type="java.lang.Long" name="uid">
+            <generator class="increment"></generator>
+        </id>
+        <property name="account" column="account" type="java.lang.String" not-null="true" length="20" unique="true"/>
+        <property name="passwod" column="passwod" type="java.lang.String" not-null="true" length="64"/>
+        <property name="sex" column="sex" type="java.lang.String" not-null="true" length="2" />
+        <property name="nick" column="nick" type="java.lang.String" not-null="true" length="20" />
+        <property name="phone" column="phone" type="java.lang.String" not-null="true" length="15" />
+        <property name="address" column="address" type="java.lang.String" not-null="true" length="50" />
+        <property name="email" column="email" type="java.lang.String" not-null="true" length="20" />
+        <property name="college" column="email" type="java.lang.String" not-null="true" length="20" />
+        <property name="info" column="info" type="java.lang.String" not-null="true" length="200" />
+         
+
+         
+         <set name="manuscripts" inverse="true" cascade="all">
+             <key column="rid"></key>
+             <one-to-many class="com.ccrp.domain.Manuscript"/>
+         </set>
+         
+    </class>
+</hibernate-mapping>
