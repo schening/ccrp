@@ -1,0 +1,104 @@
+package com.ccrp.domain;
+
+import java.io.Serializable;
+/**
+ * 基础角色信息
+ * @author YaoJialing
+ *
+ */
+public class BaseRole implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private String account;//账户
+	private String name;//密码
+	private String sex;//性别
+	private String nick;//昵称
+	private String phone;//手机
+	private String address;//地址
+	private String email;//邮箱
+	private String college;//学院
+	
+    /**
+     * 属性对应的getter()和setter(方法)
+     */
+    
+	public String getAccount() {
+		return account;
+	}
+
+	public void setAccount(String account) {
+		this.account = account;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public String getNick() {
+		return nick;
+	}
+
+	public void setNick(String nick) {
+		this.nick = nick;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getCollege() {
+		return college;
+	}
+
+	public void setCollege(String college) {
+		this.college = college;
+	}
+	
+	/**
+     * toString()方法，输出角色信息
+     */
+	@Override
+	public String toString() {
+		return "BaseRole [account=" + account + ", name=" + name + ", sex=" + sex + ", nick=" + nick
+				+ ", phone=" + phone + ", address=" + address + ", email=" + email + ", college=" + college
+				+ "]";
+	}
+
+
+}
